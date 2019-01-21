@@ -279,6 +279,7 @@ if g:vim_bootstrap_editor == 'nvim'
 else
   nnoremap <silent> <leader>sh :VimShellCreate<CR>
 endif
+tnoremap <Esc> <C-\><C-n>
 
 "*****************************************************************************
 "" Functions
