@@ -1,6 +1,6 @@
-" ~/.config/nvim/session/stdc.vim:
+" ~/.config/nvim/session/py.vim:
 " Vim session script.
-" Created by session.vim 2.13.1 on 22 January 2019 at 18:42:18.
+" Created by session.vim 2.13.1 on 04 February 2019 at 10:36:57.
 " Open this file in Vim and run :source % to restore your session.
 
 if exists('g:syntax_on') != 1 | syntax on | endif
@@ -21,8 +21,6 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +1 term://.//12708:/usr/bin/fish
-badd +1 term://.//12725:/usr/bin/fish
 argglobal
 silent! argdel *
 set splitbelow splitright
@@ -30,12 +28,11 @@ wincmd _ | wincmd |
 vsplit
 wincmd _ | wincmd |
 vsplit
-2wincmd h
-wincmd w
-wincmd w
 wincmd _ | wincmd |
-split
-1wincmd k
+vsplit
+3wincmd h
+wincmd w
+wincmd w
 wincmd w
 set nosplitbelow
 set nosplitright
@@ -44,12 +41,10 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 40 + 129) / 258)
-exe 'vert 2resize ' . ((&columns * 123 + 129) / 258)
-exe '3resize ' . ((&lines * 31 + 25) / 51)
-exe 'vert 3resize ' . ((&columns * 93 + 129) / 258)
-exe '4resize ' . ((&lines * 16 + 25) / 51)
-exe 'vert 4resize ' . ((&columns * 93 + 129) / 258)
+exe 'vert 1resize ' . ((&columns * 35 + 114) / 228)
+exe 'vert 2resize ' . ((&columns * 64 + 114) / 228)
+exe 'vert 3resize ' . ((&columns * 63 + 114) / 228)
+exe 'vert 4resize ' . ((&columns * 63 + 114) / 228)
 argglobal
 enew
 " file NERD_tree_1
@@ -74,7 +69,7 @@ setlocal fdn=20
 setlocal fen
 wincmd w
 argglobal
-if bufexists('term://.//12708:/usr/bin/fish') | buffer term://.//12708:/usr/bin/fish | else | edit term://.//12708:/usr/bin/fish | endif
+enew
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -83,15 +78,9 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 15) / 31)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-1
-normal! 0
 wincmd w
 argglobal
-if bufexists('term://.//12725:/usr/bin/fish') | buffer term://.//12725:/usr/bin/fish | else | edit term://.//12725:/usr/bin/fish | endif
+enew
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -100,19 +89,12 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 1 - ((0 * winheight(0) + 8) / 16)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-1
-normal! 0
 wincmd w
-exe 'vert 1resize ' . ((&columns * 40 + 129) / 258)
-exe 'vert 2resize ' . ((&columns * 123 + 129) / 258)
-exe '3resize ' . ((&lines * 31 + 25) / 51)
-exe 'vert 3resize ' . ((&columns * 93 + 129) / 258)
-exe '4resize ' . ((&lines * 16 + 25) / 51)
-exe 'vert 4resize ' . ((&columns * 93 + 129) / 258)
+2wincmd w
+exe 'vert 1resize ' . ((&columns * 35 + 114) / 228)
+exe 'vert 2resize ' . ((&columns * 64 + 114) / 228)
+exe 'vert 3resize ' . ((&columns * 63 + 114) / 228)
+exe 'vert 4resize ' . ((&columns * 63 + 114) / 228)
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
 "   silent exe 'bwipe ' . s:wipebuf
@@ -141,8 +123,8 @@ if !getbufvar(s:bufnr_save, '&modified')
   endif
 endif
 execute "cd" fnameescape(s:cwd_save)
-1resize 48|vert 1resize 40|2resize 48|vert 2resize 123|3resize 31|vert 3resize 93|4resize 16|vert 4resize 93|
-1wincmd w
+1resize 39|vert 1resize 35|2resize 39|vert 2resize 64|3resize 39|vert 3resize 63|4resize 39|vert 4resize 63|
+2wincmd w
 tabnext 1
 if exists('s:wipebuf')
   if empty(bufname(s:wipebuf))

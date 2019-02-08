@@ -22,7 +22,7 @@ if !filereadable(vimplug_exists)
   silent !\curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   let g:not_finish_vimplug = "yes"
 
-  autocmd VimEnter * PlugInstall
+"autocmd VimEnter * PlugInstall
 endif
 
 " Required:
@@ -171,11 +171,11 @@ let g:session_command_aliases = 1
 "*****************************************************************************
 syntax on
 set ruler
-set number
+set number relativenumber
 
 let no_buffers_menu=1
 if !exists('g:not_finish_vimplug')
-  "colorscheme molokai
+  colorscheme molokai
 endif
 colo molokai
 set mousemodel=popup
@@ -197,7 +197,6 @@ else
   let g:indentLine_char = '┆'
   let g:indentLine_faster = 1
 
-  
 endif
 
 
