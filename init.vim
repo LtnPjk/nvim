@@ -85,6 +85,12 @@ Plug 'honza/vim-snippets'
 "" Color
 Plug 'tomasr/molokai'
 
+"" GODOT
+Plug 'quabug/vim-gdscript'
+
+"" Latex
+Plug 'lervag/vimtex'
+
 "*****************************************************************************
 "" Custom bundles
 "*****************************************************************************
@@ -126,6 +132,13 @@ set fileencodings=utf-8
 set bomb
 set binary
 
+"" Latex
+"let g:LatexBox_latexmk_async=1
+let g:tex_flavor='latex'
+let g:tex_conceal=''
+let g:vimtex_latexmk_continous=1
+let g:vimtex_fold_manual=1
+let g:vimtex_compiler_progname='nvr'
 
 "" Fix backspace indent
 set backspace=indent,eol,start
