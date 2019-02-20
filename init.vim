@@ -132,6 +132,9 @@ set fileencodings=utf-8
 set bomb
 set binary
 
+""Mouse
+set mouse=a
+
 "" Latex
 "let g:LatexBox_latexmk_async=1
 let g:tex_flavor='latex'
