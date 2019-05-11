@@ -142,6 +142,10 @@ let g:tex_conceal=''
 let g:vimtex_latexmk_continous=1
 let g:vimtex_fold_manual=1
 let g:vimtex_compiler_progname='nvr'
+let g:Tex_GotoError=0
+let g:Tex_ShowErrorContext=0
+
+map å :SyntasticToggleMode<cr>:w<cr>
 
 "" Fix backspace indent
 set backspace=indent,eol,start

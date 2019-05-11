@@ -1,6 +1,6 @@
-" ~/.config/nvim/session/pyPong.vim:
+" ~/.config/nvim/session/latex.vim:
 " Vim session script.
-" Created by session.vim 2.13.1 on 10 February 2019 at 20:13:57.
+" Created by session.vim 2.13.1 on 19 February 2019 at 18:24:49.
 " Open this file in Vim and run :source % to restore your session.
 
 if exists('g:syntax_on') != 1 | syntax on | endif
@@ -16,37 +16,33 @@ let SessionLoad = 1
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/github/pyPong
+cd ~/github/DVA315/lab2
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +1 entities/ball.py
-badd +27 system/component.py
-badd +1 config.py
-badd +18 main.py
-badd +1 term://.//31280:/usr/bin/fish
-badd +2 TODO.txt
-badd +382 term://.//3313:/usr/bin/fish
-badd +1 component.py
-badd +1 term://.//31164:/usr/bin/fish
-badd +0 entities/player.py
-badd +0 system/game.py
+badd +5 rapport.tex
+badd +131 main.c
+badd +0 term://.//16916:/usr/bin/fish
+badd +0 main_old.c
+badd +10 Makefile
+badd +12 Makefile_old
 argglobal
 silent! argdel *
-edit main.py
+$argadd rapport.tex
+edit rapport.tex
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
 wincmd _ | wincmd |
 vsplit
 2wincmd h
+wincmd w
+wincmd w
 wincmd _ | wincmd |
 split
 1wincmd k
 wincmd w
-wincmd w
-wincmd w
 set nosplitbelow
 set nosplitright
 wincmd t
@@ -54,12 +50,12 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe '1resize ' . ((&lines * 35 + 25) / 51)
-exe 'vert 1resize ' . ((&columns * 95 + 131) / 263)
-exe '2resize ' . ((&lines * 12 + 25) / 51)
-exe 'vert 2resize ' . ((&columns * 95 + 131) / 263)
-exe 'vert 3resize ' . ((&columns * 86 + 131) / 263)
-exe 'vert 4resize ' . ((&columns * 80 + 131) / 263)
+exe 'vert 1resize ' . ((&columns * 103 + 155) / 311)
+exe 'vert 2resize ' . ((&columns * 103 + 155) / 311)
+exe '3resize ' . ((&lines * 27 + 28) / 57)
+exe 'vert 3resize ' . ((&columns * 103 + 155) / 311)
+exe '4resize ' . ((&lines * 26 + 28) / 57)
+exe 'vert 4resize ' . ((&columns * 103 + 155) / 311)
 argglobal
 setlocal fdm=manual
 setlocal fde=0
@@ -70,32 +66,16 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 17 - ((16 * winheight(0) + 17) / 35)
+let s:l = 18 - ((17 * winheight(0) + 27) / 54)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-17
-normal! 034|
+18
+normal! 014|
+lcd ~/github/DVA315/lab2
 wincmd w
 argglobal
-if bufexists('term://.//31164:/usr/bin/fish') | buffer term://.//31164:/usr/bin/fish | else | edit term://.//31164:/usr/bin/fish | endif
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-let s:l = 10012 - ((11 * winheight(0) + 6) / 12)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-10012
-normal! 05|
-wincmd w
-argglobal
-if bufexists('entities/ball.py') | buffer entities/ball.py | else | edit entities/ball.py | endif
+if bufexists('~/github/DVA315/lab2/main_old.c') | buffer ~/github/DVA315/lab2/main_old.c | else | edit ~/github/DVA315/lab2/main_old.c | endif
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -105,15 +85,16 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 3 - ((2 * winheight(0) + 24) / 48)
+let s:l = 168 - ((53 * winheight(0) + 27) / 54)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-3
-normal! 012|
+168
+normal! 0
+lcd ~/github/DVA315/lab2
 wincmd w
 argglobal
-if bufexists('entities/player.py') | buffer entities/player.py | else | edit entities/player.py | endif
+if bufexists('~/github/DVA315/lab2/main.c') | buffer ~/github/DVA315/lab2/main.c | else | edit ~/github/DVA315/lab2/main.c | endif
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -123,28 +104,44 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 26 - ((22 * winheight(0) + 24) / 48)
+let s:l = 154 - ((12 * winheight(0) + 13) / 27)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-26
-normal! 06|
+154
+normal! 0
+lcd ~/github/DVA315/lab2
+wincmd w
+argglobal
+if bufexists('term://.//16916:/usr/bin/fish') | buffer term://.//16916:/usr/bin/fish | else | edit term://.//16916:/usr/bin/fish | endif
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 10026 - ((25 * winheight(0) + 13) / 26)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+10026
+normal! 02|
+lcd ~/github/DVA315/lab2
 wincmd w
 2wincmd w
-exe '1resize ' . ((&lines * 35 + 25) / 51)
-exe 'vert 1resize ' . ((&columns * 95 + 131) / 263)
-exe '2resize ' . ((&lines * 12 + 25) / 51)
-exe 'vert 2resize ' . ((&columns * 95 + 131) / 263)
-exe 'vert 3resize ' . ((&columns * 86 + 131) / 263)
-exe 'vert 4resize ' . ((&columns * 80 + 131) / 263)
-tabedit main.py
+exe 'vert 1resize ' . ((&columns * 103 + 155) / 311)
+exe 'vert 2resize ' . ((&columns * 103 + 155) / 311)
+exe '3resize ' . ((&lines * 27 + 28) / 57)
+exe 'vert 3resize ' . ((&columns * 103 + 155) / 311)
+exe '4resize ' . ((&lines * 26 + 28) / 57)
+exe 'vert 4resize ' . ((&columns * 103 + 155) / 311)
+tabnew
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
-wincmd _ | wincmd |
-vsplit
-2wincmd h
-wincmd w
+1wincmd h
 wincmd w
 set nosplitbelow
 set nosplitright
@@ -153,10 +150,22 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 85 + 131) / 263)
-exe 'vert 2resize ' . ((&columns * 91 + 131) / 263)
-exe 'vert 3resize ' . ((&columns * 85 + 131) / 263)
+exe 'vert 1resize ' . ((&columns * 40 + 155) / 311)
+exe 'vert 2resize ' . ((&columns * 270 + 155) / 311)
 argglobal
+enew
+" file ~/github/DVA315/lab2/NERD_tree_1
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+wincmd w
+argglobal
+enew
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -165,53 +174,9 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-silent! normal! zE
-let s:l = 21 - ((20 * winheight(0) + 24) / 48)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-21
-normal! 013|
 wincmd w
-argglobal
-if bufexists('system/game.py') | buffer system/game.py | else | edit system/game.py | endif
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let s:l = 35 - ((29 * winheight(0) + 24) / 48)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-35
-normal! 020|
-wincmd w
-argglobal
-if bufexists('config.py') | buffer config.py | else | edit config.py | endif
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let s:l = 3 - ((2 * winheight(0) + 24) / 48)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-3
-normal! 0
-wincmd w
-exe 'vert 1resize ' . ((&columns * 85 + 131) / 263)
-exe 'vert 2resize ' . ((&columns * 91 + 131) / 263)
-exe 'vert 3resize ' . ((&columns * 85 + 131) / 263)
+exe 'vert 1resize ' . ((&columns * 40 + 155) / 311)
+exe 'vert 2resize ' . ((&columns * 270 + 155) / 311)
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
 "   silent exe 'bwipe ' . s:wipebuf
@@ -228,6 +193,19 @@ let &so = s:so_save | let &siso = s:siso_save
 " Everything down here is generated by vim-session (not supported
 " by :mksession out of the box).
 
+1wincmd w
+tabnext 2
+let s:bufnr_save = bufnr("%")
+let s:cwd_save = getcwd()
+NERDTree ~/github/DVA315/lab2
+if !getbufvar(s:bufnr_save, '&modified')
+  let s:wipebuflines = getbufline(s:bufnr_save, 1, '$')
+  if len(s:wipebuflines) <= 1 && empty(get(s:wipebuflines, 0, ''))
+    silent execute 'bwipeout' s:bufnr_save
+  endif
+endif
+execute "cd" fnameescape(s:cwd_save)
+1resize 54|vert 1resize 40|2resize 54|vert 2resize 270|
 2wincmd w
 tabnext 1
 if exists('s:wipebuf')
